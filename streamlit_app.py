@@ -28,7 +28,9 @@ if src == "Youtube URL":
     # Indie/Pop/Folk Compilation - December 2021
     # url = 'https://www.youtube.com/watch?v=6no3uMeMIr8'
     # One Repubilc - Someday
-    url = "https://www.youtube.com/watch?v=vNfgVjZF8_4" 
+    # url = "https://www.youtube.com/watch?v=vNfgVjZF8_4" 
+    # Jason Derulo - Savage Love
+    url = "https://www.youtube.com/watch?v=sQR2-Q-k_9Y"
     url = st.text_input('Youtube URL',url)
     # Download Youtube video
     youtube = pytube.YouTube(url)
@@ -40,7 +42,7 @@ if src == "Youtube URL":
     
 else:
 
-    search = st.text_input('Youtube Search',"OneRepublic - Someday")
+    search = st.text_input('Youtube Search',"jason derulo savage love")
     r = pytube.Search(search).results
     # st.write(r[0].streams.first().title)
     # t = [i.streams.first().title for i in r]
@@ -50,11 +52,11 @@ else:
 dl = st.button('Download')
 
 if dl:
-
+    
     st.write(video)
     title = video.title
     path = video.download('downloads')
-    st.text(title)
+    st.markdown("["+title+"]("+video.url+")")
     st.video(path,format='video/mp4', start_time=0)
 
     try:

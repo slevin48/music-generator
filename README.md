@@ -5,4 +5,4 @@
 🎧🎙🎚🎛📻📣📢🔊🔉🔈
 Retrieve playlists from Youtube
 
-![app](music-generator.png)
+![app](music-generator2.png)
